@@ -10,10 +10,17 @@ h1 {
   top: -10px;
   background: #009900;
 }
+
+/* Added CSS for side-by-side buttons */
+.btn-group button {
+  float: left; /* Float the buttons side by side */
+}
+
 .delete-button {
-  position: relative;
-  top: -10px;
-  background: #CC0000;
+  width: auto;
+  margin: 0 auto;
+  color: #CC0000;
+  float: left; /* Float the buttons side by side */
 }
 nav ul {
   list-style-type: none;
