@@ -10,14 +10,17 @@
 <!-- partial:index.partial.html -->
 <div class="app">
   <h1>Notes</h1>
-  <button @click="createNote" class="create-new-button">Create new</button>
-  <button @click="deleteNote" class="delete-button" ref="deleteButton">Delete</button>
-  <div class='notes'>
+  <button @click="createNote(currentNote)" class="create-new-button">Create new</button>
+  <!-- <button @click="deleteNote" class="delete-button" ref="deleteButton">Delete</button> -->
+  <div class="notes">
     <nav>
       <p v-if="!notes.length">No notes saved</p>
       <ul v-if="notes.length">
         <li v-for="note in notes">
-          <button @click="currentNote = note" :class="{active: note === currentNote}">  {{note.title}}</button>
+          <div class="btn-group" style="width:100%">
+            <button style="width:90%" @click="currentNote = note" :class="{active: note === currentNote}">{{note.title}}</button>
+            <button style="width:5%" @click="deleteNote(note)" class="delete-button">X</button>
+          </div>
         </li>
       </ul>
     </nav>
