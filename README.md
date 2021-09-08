@@ -2,6 +2,8 @@
 
 A basic note-taking app made with Vue.js and Electron. Stores notes locally in the browser.
 
+<p align="center"><img src="Screenshots/MainWindow.PNG"></p>
+
 ## How to Build
 
 - add the node_modules folder from Electron;
