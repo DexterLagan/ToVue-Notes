@@ -11,6 +11,7 @@
 <div class="app">
   <h1>Notes</h1>
   <button @click="createNote" class="create-new-button">Create new</button>
+  <button @click="deleteNote" class="delete-button" ref="deleteButton">Delete</button>
   <div class='notes'>
     <nav>
       <p v-if="!notes.length">No notes saved</p>
