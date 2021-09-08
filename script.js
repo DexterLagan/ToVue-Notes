@@ -4,21 +4,6 @@ const app = new Vue({
     notes: [],
     currentNote: null
   },
-  // load notes when Vue app is mounted
-  mounted() {
-    if (localStorage.notes) {
-      this.notes = JSON.parse(localStorage.notes);
-    }
-  },
-  // save notes when they're modified
-  watch: {
-    notes: {
-      handler(newNotes) {
-        localStorage.notes = JSON.stringify(newNotes);
-      },
-      deep: true
-    }
-  },
   methods: {
     createNote() {
       const newNote = {title: '', contents: ''};
@@ -27,6 +12,20 @@ const app = new Vue({
       this.$nextTick(function() {
         this.$refs.noteTitle.focus();
       });
+    },
+    deleteNote() {
+      for (var i = 0; i < this.notes.length; i++) {
+        if (this.notes[i] === this.currentNote) {
+          if (confirm("Are you sure?")) {
+            this.notes.splice(i, 1);
+            this.currentNote = null;
+            this.$nextTick(function() {
+              this.$refs.deleteButton.blur();
+            });
+          }
+        }
+      }
     }
+    
   }
 });
