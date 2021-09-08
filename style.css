@@ -8,6 +8,12 @@ h1 {
 .create-new-button {
   position: relative;
   top: -10px;
+  background: #009900;
+}
+.delete-button {
+  position: relative;
+  top: -10px;
+  background: #CC0000;
 }
 nav ul {
   list-style-type: none;
@@ -51,7 +57,7 @@ nav {
 }
 .current-note input:hover, .current-note textarea:hover,
 .current-note input:focus, .current-note textarea:focus {
-  background: lavender;
+  background: lightblue;
 }
 .current-note input {
   font-size: 3.6rem;
