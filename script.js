@@ -13,10 +13,10 @@ const app = new Vue({
         this.$refs.noteTitle.focus();
       });
     },
-    deleteNote() {
+    deleteNote(noteToDelete) {
       for (var i = 0; i < this.notes.length; i++) {
-        if (this.notes[i] === this.currentNote) {
-          if (confirm("Are you sure?")) {
+        if (this.notes[i] === noteToDelete) {
+          if (confirm("Delete note?")) {
             this.notes.splice(i, 1);
             this.currentNote = null;
             this.$nextTick(function() {
@@ -26,6 +26,5 @@ const app = new Vue({
         }
       }
     }
-    
   }
 });
