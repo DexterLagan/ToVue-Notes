@@ -1,8 +1,10 @@
 # ToVue Notes
 
-A basic note-taking app made with Vue.js and Electron. Stores notes locally in the browser.<br>
+A basic note-taking app made with Vue.js and Electron. Stores notes locally in the browser.
 
-<p align="center"><img src="Screenshots/MainWindow.PNG"></p>
+## Screenshot
+
+<p align="center"><img src="Screenshots/MainWindow.PNG"><br>ToVue's main window.</p>
 
 ## How to Build
 
